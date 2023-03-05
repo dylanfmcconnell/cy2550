@@ -78,6 +78,7 @@ public class xkcdpwgen {
       
       System.out.println(createPassword(w, c, n, s, words));
     }
+    System.out.println(createPassword(4, -1, -1, -1, words));
   }
   
   static int readModifier(String modifier) {
