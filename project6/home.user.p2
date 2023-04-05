@@ -1,0 +1,17 @@
+# Last Modified: Tue Apr  4 21:35:33 2023
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/home/dylanfmcconnell/p2 flags=(audit) {
+  include <abstractions/base>
+  /tmp/project* rw,
+  /home/dylanfmcconnell/.project2/config rw,
+  /var/log/syslog r,
+  /etc/{fstab,crontab,passwd,hosts} r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /proc/{version,buddyinfo} r,
+  /@{HOME}/template r,
+  network tcp,
+}
+
